@@ -1,10 +1,14 @@
 "use client"
-import Components from "@/components/Components";
+
+import Carduicomponents from "@/components/carduicomponents/Carduicomponents";
+
 
 export default function Home() {
   return (
     <main className="">
-      <Components></Components>
+      <Carduicomponents></Carduicomponents>
     </main>
   );
 }
+
+

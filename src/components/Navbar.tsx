@@ -5,15 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./toggles/ThemeToggle";
 import Logo from "../../public/dropdevlogo.png"
 import Image from "next/image";
-import { Yatra_One } from 'next/font/google'
+import { Philosopher } from 'next/font/google'
 import { Menu } from 'lucide-react';
 import { Sidebar } from "./sidebar/sidebar";
 
 
-const inter = Yatra_One({
-    weight: '400',
-    subsets: ['latin'],
-})
+const inter = Philosopher({subsets: ['latin'],weight:['400']})
 export default function Navbar() {
     const [isScrolling, setIsScrolling] = useState(false);
     const handleScroll = () => {
@@ -43,13 +40,14 @@ export default function Navbar() {
         </>
     );
 }
-
 function NavbarFixed() {
     return (
         <nav className="fixed z-10 flex justify-between items-center w-full sm:px-8 sm:py-2 border-b bg-black/5 border-gray-200 divide-inherit h-14 backdrop-blur-lg transition-all top-0">
             <div className="flex items-center gap-1 sm gap-1:sm:gap-3 text-black dark:text-white ">
-                <Image src={Logo} alt="Logo" className='h-11 w-11'></Image>
-                <p className={`${inter.className} font-bold text-inherit text-xl mt-4 hidden lg:block -ml-3`}>dropdev</p>
+                <div className="flex items-center justify-center h-8 w-8 rounded-lg">
+                <Image src={Logo} alt="Logo" className=' h-7  w-7'></Image>
+                </div>
+                <p className={`${inter.className} text-inherit text-3xl  hidden lg:block `}>DropDev</p>
             </div>
             <ul className="flex items-center text-black dark:text-white lg:-ml-20">
                 <div className="hidden lg:block">
@@ -112,9 +110,21 @@ const NavAnimations = {
 
 
 
-const tabs = ['Components', 'Templates', 'Services']
-const Tab = ({ text, selected, setSelected }: any) => {
+const tabs = [
+    {text:'Components',
+    link:"/components"
+    }, 
+    {
+        text:'Templates',
+        link:"/templates"
+    }, {
+        text:'Services',
+        link:"/services"
+
+    }]
+const Tab = ({ text, selected, setSelected ,link}: any) => {
     return (
+        <Link href={link}>
         <button
             onClick={() => setSelected(text)}
             className={
@@ -129,19 +139,20 @@ const Tab = ({ text, selected, setSelected }: any) => {
                 <motion.span
                     layoutId="tab"
                     transition={{ type: 'spring', duration: 0.4 }}
-                    className="absolute inset-0 z-0 rounded-md bg-slate-900 dark:bg-slate-300"
+                    className="absolute inset-0 rounded-md bg-slate-900 dark:bg-slate-300"
                 ></motion.span>
             )}
         </button>
+        </Link>
     )
 }
 
 const AnimatedTabs = ({ Scrolled }: any) => {
-    const [selected, setSelected] = useState(tabs[0])
+    const [selected, setSelected] = useState(tabs[0].text)
     return (
         <div className="flex flex-wrap items-center gap-1 sm:gap-3">
             {tabs.map((tab, index) => (
-                <Tab text={tab} selected={selected === tab} setSelected={setSelected} key={tab} />
+                <Tab text={tab.text} selected={selected === tab.text} link={tab.link} setSelected={setSelected} key={tab.text} />
             ))}
 
             {Scrolled ?

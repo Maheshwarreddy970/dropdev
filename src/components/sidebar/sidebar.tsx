@@ -8,11 +8,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import Logo from "../../../public/dropdevlogo.png"
-import { Yatra_One } from 'next/font/google'
+import { Philosopher } from 'next/font/google'
 import Image from "next/image";
 import Sidebaroptions from "./sidebaroptions"
 
-const inter = Yatra_One({
+const inter = Philosopher({
     weight: '400',
     subsets: ['latin'],
 })
@@ -33,8 +33,8 @@ export function Sidebar({ children}:Props) {
       <SheetContent>
       <SheetHeader>
         <div className="flex flex-row">
-      <Image src={Logo} alt="Logo" className='h-11 w-11'></Image>
-      <p className={`${inter.className} font-bold text-inherit text-xl mt-4 hidden lg:block`}>dropdev</p>          
+      <Image src={Logo} alt="Logo" className='h-7 mt-1 w-7'></Image>
+      <p className={`${inter.className} text-inherit text-3xl`}>DropDev</p>          
         </div>
         </SheetHeader>
         <Sidebaroptions></Sidebaroptions>

@@ -22,8 +22,8 @@ export default function RootLayout({
       <body className={inter.className}>
       <NextThemesProvider
       attribute="class"
-      defaultTheme="system"
-      enableSystem
+      defaultTheme="dark"
+      enableColorScheme
     >
       <Navbar></Navbar>
         {children}
