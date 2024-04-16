@@ -6,7 +6,7 @@ import { Smartphone } from "lucide-react";
 
 let tabs = [
   { id: "Laptop", 
-  label: <LaptopMinimal className=""></LaptopMinimal> 
+  label: <LaptopMinimal ></LaptopMinimal> 
   },
   { 
     id: "Tabet", 

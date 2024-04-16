@@ -1,46 +1,32 @@
+import Link from "next/link"
 import {
-    CalendarIcon,
-    EnvelopeClosedIcon,
-    FaceIcon,
-    GearIcon,
-    PersonIcon,
-    RocketIcon,
-  } from "@radix-ui/react-icons"
-  
-  import {
-    Command,
-    CommandEmpty,
-    CommandGroup,
-    CommandInput,
-    CommandItem,
-    CommandList,
-    CommandSeparator,
-    CommandShortcut,
-  } from "@/components/ui/command"
-  
-  export default function Componentsoptions() {
-    return (
-      <Command className="sm:block hidden h-auto w-1/6 rounded-lg border shadow-md">
-        <CommandInput placeholder="Search..." />
-        <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandSeparator />
-          <CommandGroup heading="ON THIS PAGE">
-            <CommandItem>
-              <PersonIcon className="mr-2 h-4 w-4" />
-              <span>Profile</span>
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command"
+
+export default function Componentsoptions({ ButtonsList }: any) {
+  return (
+    <Command className="sm:block hidden h-auto w-1/6 rounded-lg border shadow-md">
+      <CommandInput placeholder="Search..." />
+      <CommandList>
+        <CommandEmpty>No results found.</CommandEmpty>
+        <CommandSeparator />
+        <CommandGroup heading="ON THIS PAGE">
+          {ButtonsList.map((name: any, index: any) => (
+            <CommandItem className="px-4 w-full py-2 rounded-md border active:bg-black active:text-white dark:active:bg-white dark:active:text-black mt-1 text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md ">
+              <Link href={`#${name}`} className="">
+                {name}
+              </Link>
             </CommandItem>
-            <CommandItem>
-              <EnvelopeClosedIcon className="mr-2 h-4 w-4" />
-              <span>Mail</span>
-            </CommandItem>
-            <CommandItem>
-              <GearIcon className="mr-2 h-4 w-4" />
-              <span>Settings</span>
-            </CommandItem>
-          </CommandGroup>
-        </CommandList>
-      </Command>
-    )
-  }
-  
+          ))}
+        </CommandGroup>
+      </CommandList>
+    </Command>
+  )
+}
