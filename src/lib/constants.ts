@@ -10,8 +10,8 @@ export const Components_List = [
     },
   
     {
-      name: "Price",
-      url: "/price"
+      name: "Bottomnavigation",
+      url: "/bottomnavigation"
     },
     {
       name: "Navigetion",
