@@ -1,30 +1,13 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { LaptopMinimal } from "lucide-react";
-import { Tablet } from "lucide-react"; 
-import { Smartphone } from "lucide-react";
 
-let tabs = [
-  { id: "Laptop", 
-  label: <LaptopMinimal ></LaptopMinimal> 
-  },
-  { 
-    id: "Tabet", 
-    label: <Tablet></Tablet>
-  },
-  {
-   id: "Mobile",
-   label: <Smartphone></Smartphone>
-  },
 
-];
 
-export function AnimatedTabs() {
-  let [activeTab, setActiveTab] = useState(tabs[0].id);
+
+export function AnimatedTabs({activeTab,setActiveTab,tabs}:any) {
 
   return (
     <div className="flex gap-2">
-      {tabs.map((tab) => (
+      {tabs.map((tab:any) => (
         <button
           key={tab.id}
           onClick={() => setActiveTab(tab.id)}

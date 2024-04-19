@@ -1,12 +1,14 @@
 export const Components_List = [
+
     {
-      name: "Button",
-      url: "/button"
+      name: "Accordion",
+      url: "/accordion"
     },
     {
-      name: "Card",
-      url: "/card"
+      name: "Avatar",
+      url: "/avatar"
     },
+  
     {
       name: "Price",
       url: "/price"
@@ -14,9 +16,5 @@ export const Components_List = [
     {
       name: "Navigetion",
       url: "/navbar"
-    },
-    {
-      name: "Avatar",
-      url: "/avatar"
     },
   ]
