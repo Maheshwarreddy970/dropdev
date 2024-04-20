@@ -35,6 +35,10 @@ const config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        boxShadow: {
+          'button': '-5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444   inset -5px -5px 10px #222',
+          'button-hover': '-5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444',
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

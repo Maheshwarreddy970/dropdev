@@ -35,7 +35,7 @@ export const Individualaccordion = () => {
     return (
         <div className=" w-11/12 flex flex-col justify-center">
             {frequentlyAskQuestions.map((item, i) => (
-                <div key={i} className="bg-white ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:mx-auto sm:max-w-sm sm:rounded-lg  w-full m-2 rounded-lg shadow-md">
+                <div key={i} className="bg-white dark:bg-black ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:mx-auto sm:max-w-sm sm:rounded-lg  w-full m-2 rounded-lg shadow-md">
                     <div
                         className={`px-5 w-full py-4 flex justify-center ${activeId === i ? "col-span-2 text-lg font-bold capitalize rounded-md" : ""
                             }`}
@@ -51,7 +51,7 @@ export const Individualaccordion = () => {
                             )}
                         </span>
                         <svg
-                            className="fill-black shrink-0 ml-8"
+                            className="fill-black dark:fill-white shrink-0 ml-8"
                             width="16"
                             height="16"
                             xmlns="http://www.w3.org/2000/svg"

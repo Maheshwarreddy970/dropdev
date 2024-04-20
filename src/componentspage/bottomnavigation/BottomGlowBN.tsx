@@ -39,7 +39,7 @@ export default function BottomGlowBN() {
                     ? " duration-700 opacity-100 font-bold  brightness-110 -translate-y-[1px] border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px] shadow-xl shadow-green-300 active:shadow-none"
                     : "opacity-40"
                   }transition-all 
-                  dark:text-white text-black
+                  
                   bg-white dark:bg-black px-6 py-2 rounded-lg
                   border-green-400
                   hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]

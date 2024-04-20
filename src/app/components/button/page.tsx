@@ -10,7 +10,7 @@ import Buttonrender from '@/components/carduicomponents/Buttonrender'
 export default function Button() {
     return (
         <div className='w-screen flex px-3 mt-1/2 sm:justify-around mt-32'>
-        <Componentsoptions ButtonsList={ButtonsList}></Componentsoptions>
+        <Componentsoptions List={ButtonsList}></Componentsoptions>
             <Carduicomponents><Buttonrender></Buttonrender></Carduicomponents>
             
         </div>

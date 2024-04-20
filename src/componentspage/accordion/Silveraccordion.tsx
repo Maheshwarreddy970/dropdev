@@ -50,8 +50,28 @@ export const Silveraccordion = () => {
                                 <i className="fa-solid fa-angle-down"></i>
                             )}
                         </span>
-                        <svg className='text-gray-900 transition duration-500 group-hover:text-indigo-600 accordion-active:text-indigo-600 accordion-active:rotate-180' width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                            <path d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                        <svg
+                            className="fill-black shrink-0 ml-8"
+                            width="16"
+                            height="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <rect
+                                y="7"
+                                width="16"
+                                height="2"
+                                rx="1"
+                                className={`transform origin-center transition duration-200 ease-out ${activeId === i && "!rotate-180"
+                                    }`}
+                            />
+                            <rect
+                                y="7"
+                                width="16"
+                                height="2"
+                                rx="1"
+                                className={`transform origin-center rotate-90 transition duration-200 ease-out ${activeId === i && "!rotate-180"
+                                    }`}
+                            />
                         </svg>
                     </div>
                     {activeId === i && (

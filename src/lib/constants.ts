@@ -14,7 +14,7 @@ export const Components_List = [
       url: "/bottomnavigation"
     },
     {
-      name: "Navigetion",
-      url: "/navbar"
+      name: "Button",
+      url: "/button"
     },
   ]
